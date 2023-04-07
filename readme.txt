@@ -1,6 +1,9 @@
 JJM 04/07/2023
 Linuxcnc Stuff
 
+Most of this information is from the LinuxCNC forum user Lcvette on his post at https://forum.linuxcnc.org/qtpyvcp/48373-qtpyvcp-and-probe-basic-deb-installation-files-inside
+and his google drive links listed below
+
 Installing Debian 12, Linux CNC, and Probe Basic
 **Requirements:**
 

@@ -1,3 +1,4 @@
+JJM 04/07/2023
 Linuxcnc Stuff
 
 Installing Debian 12, Linux CNC, and Probe Basic
@@ -45,7 +46,7 @@ and download the 3 .deb files to your downloads folder
 
 **Installing QtPyVCP and Probe Basic**
 
-**1-  Go to the downloaded files location, right click and select "Open Terminal Here" in that directory.**
+**1-  Go to the downloaded files location, right click and select "Open in terminal" in that directory.**
 
 **2-  Inthe terminal enter the following command and press enter, it will require your sudo password:**
 
@@ -64,7 +65,7 @@ and download the 3 .deb files to your downloads folder
     sudo dpkg -i python3-qtpyvcp_0.4-2_all.deb
 
 
-*then enter:*
+*then enter:**
 
     
     sudo dpkg -i python3-probe-basic_0.5.3_all.deb

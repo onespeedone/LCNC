@@ -12,7 +12,15 @@ sudo gedit sources.list
 
 comment out (#) the 2 top lines in the file
 
-https://drive.google.com/drive/folders/14tM4MHqLw26ebGVavKvTBb3ptx_IIcj5
+	**************
+	TOP 2 LINES ARE THIS:
+	deb cdrom:[Debian GNU/Linux bookworm-DI-alpha2 _Bookworm_ - Official Alpha amd64 DVD Binary-1 
+	with firmware 20230218-23:57]/ bookworm main non-free-firmware
+	***************
+Save and close the file
+
+Go to: https://drive.google.com/drive/folders/14tM4MHqLw26ebGVavKvTBb3ptx_IIcj5
+and download the 3 .deb files to your downloads folder
 
 **To install Probe Basic from the following .deb packages, you must install all 3 seperately using the following method:**
 

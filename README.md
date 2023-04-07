@@ -1,2 +1,0 @@
-# LCNC
- Linux CNC stuff

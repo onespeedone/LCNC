@@ -1,7 +1,7 @@
 JJM 04/07/2023
 Linuxcnc Stuff
 
-Most of this information is from the LinuxCNC forum user Lcvette on his post at https://forum.linuxcnc.org/qtpyvcp/48373-qtpyvcp-and-probe-basic-deb-installation-files-inside
+Thank you to the LinuxCNC forum user Lcvette on his post at https://forum.linuxcnc.org/qtpyvcp/48373-qtpyvcp-and-probe-basic-deb-installation-files-inside
 and his google drive link https://drive.google.com/drive/folders/14tM4MHqLw26ebGVavKvTBb3ptx_IIcj5
 
 Installing Debian 12, Linux CNC, and Probe Basic
@@ -75,6 +75,10 @@ Download the 3 .deb files from the github repository to your downloads folder
 
 **You are all installed!  you should now be able to launch your probe basic sim or machine config from within the linuxcnc applications dropdown menu.**
 
+#########################################################################################
+To get probe basic setup for your machine, follow the information here:
+https://forum.linuxcnc.org/qtpyvcp/48401-py3-probe-basic-config-conversion-doc-lcnc-2-9#266123  
+#########################################################################################
 
 **To uninstall if desired, the below commands in main terminal will completely remove each package:**
 

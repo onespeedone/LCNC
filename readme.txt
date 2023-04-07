@@ -19,6 +19,8 @@ comment out (#) the 2 top lines in the file
 	***************
 Save and close the file
 
+in your terminal type: cd ~
+
 Go to: https://drive.google.com/drive/folders/14tM4MHqLw26ebGVavKvTBb3ptx_IIcj5
 and download the 3 .deb files to your downloads folder
 

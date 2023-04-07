@@ -25,6 +25,8 @@ https://drive.google.com/drive/folders/14tM4MHqLw26ebGVavKvTBb3ptx_IIcj5
    
     sudo apt install linuxcnc-uspace linuxcnc-uspace-dev mesaflash
 
+## Restart your computer
+
 
 **Once you have installed linuxcnc, open linuxcnc and start the axis sime briefly and then you can shut it down.  this creates the folders where probe basic will copy the sim configs to.**
 

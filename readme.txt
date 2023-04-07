@@ -1,5 +1,12 @@
 Linuxcnc Stuff
 
+Installing Debian 12, Linux CNC, and Probe Basic
+**Requirements:**
+
+    - Debian 12 Bookworm
+    - Python 3.11
+    - Linuxcnc 2.9 or higher
+
 ## Start here ###
 Download the debian 12 iso from here
 https://cdimage.debian.org/cdimage/bookworm_di_alpha2/amd64/iso-dvd/
@@ -24,13 +31,6 @@ in your terminal type: cd ~
 Go to: https://drive.google.com/drive/folders/14tM4MHqLw26ebGVavKvTBb3ptx_IIcj5
 and download the 3 .deb files to your downloads folder
 
-**To install Probe Basic from the following .deb packages, you must install all 3 seperately using the following method:**
-
-**Requirements:**
-
-    - Debian 12 Bookworm
-    - Python 3.11
-    - Linuxcnc 2.9 or higher
 
 **If you have not already installed linuxcnc from apt, use the following line in main terminal:**
 
@@ -45,14 +45,14 @@ and download the 3 .deb files to your downloads folder
 
 **Installing QtPyVCP and Probe Basic**
 
-**1-  Download the files into your chosen directory typically home/your-pc-name/downloads**
+**1-  Go to the downloaded files location, right click and select "Open Terminal Here" in that directory.**
 
-**2-  Go to the downloaded files location, right click and select "Open Terminal Here" in that directory.**
-
-**3-  Inthe terminal enter the following commands one at a time and press enter, it will require your sudo password:**
+**2-  Inthe terminal enter the following commands one at a time and press enter, it will require your sudo password:**
 
     
     sudo apt install debhelper-compat dh-python python3-setuptools python3-yaml python3-pyqt5.qtmultimedia python3-pyqt5.qtquick qml-module-qtquick-controls libqt5multimedia5-plugins python3-dev python3-docopt python3-qtpy python3-pyudev python3-psutil python3-markupsafe python3-vtk9 python3-pyqtgraph python3-simpleeval python3-jinja2 python3-deepdiff python3-sqlalchemy qttools5-dev-tools python3-serial
+
+** then enter:**
 
     
     sudo dpkg -i python3-hiyapyco_0.5.1-1_all.deb

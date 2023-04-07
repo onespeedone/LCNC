@@ -2,7 +2,7 @@ JJM 04/07/2023
 Linuxcnc Stuff
 
 Most of this information is from the LinuxCNC forum user Lcvette on his post at https://forum.linuxcnc.org/qtpyvcp/48373-qtpyvcp-and-probe-basic-deb-installation-files-inside
-and his google drive links listed below
+and his google drive link https://drive.google.com/drive/folders/14tM4MHqLw26ebGVavKvTBb3ptx_IIcj5
 
 Installing Debian 12, Linux CNC, and Probe Basic
 **Requirements:**
@@ -32,8 +32,7 @@ Save and close the file
 
 in your terminal type: cd ~
 
-Go to: https://drive.google.com/drive/folders/14tM4MHqLw26ebGVavKvTBb3ptx_IIcj5
-and download the 3 .deb files to your downloads folder
+Download the 3 .deb files from the github repository to your downloads folder
 
 
 **If you have not already installed linuxcnc from apt, use the following line in main terminal:**

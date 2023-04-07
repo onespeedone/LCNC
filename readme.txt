@@ -1,6 +1,15 @@
 Linuxcnc Stuff
 
 ## Start here ###
+
+After installing debian 12 (bookworm) open a terminal and type:  
+
+cd /etc/apt/
+
+sudo gedit sources.list
+
+comment out (#) the 2 top lines in the file
+
 https://drive.google.com/drive/folders/14tM4MHqLw26ebGVavKvTBb3ptx_IIcj5
 
 **To install Probe Basic from the following .deb packages, you must install all 3 seperately using the following method:**

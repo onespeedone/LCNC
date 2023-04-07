@@ -47,7 +47,7 @@ and download the 3 .deb files to your downloads folder
 
 **1-  Go to the downloaded files location, right click and select "Open Terminal Here" in that directory.**
 
-**2-  Inthe terminal enter the following commands one at a time and press enter, it will require your sudo password:**
+**2-  Inthe terminal enter the following command and press enter, it will require your sudo password:**
 
     
     sudo apt install debhelper-compat dh-python python3-setuptools python3-yaml python3-pyqt5.qtmultimedia python3-pyqt5.qtquick qml-module-qtquick-controls libqt5multimedia5-plugins python3-dev python3-docopt python3-qtpy python3-pyudev python3-psutil python3-markupsafe python3-vtk9 python3-pyqtgraph python3-simpleeval python3-jinja2 python3-deepdiff python3-sqlalchemy qttools5-dev-tools python3-serial

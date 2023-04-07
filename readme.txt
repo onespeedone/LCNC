@@ -1,6 +1,8 @@
 Linuxcnc Stuff
 
 ## Start here ###
+Download the debian 12 iso from here
+https://cdimage.debian.org/cdimage/bookworm_di_alpha2/amd64/iso-dvd/
 
 After installing debian 12 (bookworm) open a terminal and type:  
 

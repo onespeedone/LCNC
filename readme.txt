@@ -15,6 +15,9 @@ Installing Debian 12, Linux CNC, and Probe Basic
 Download the debian 12 iso from here
 https://cdimage.debian.org/cdimage/bookworm_di_alpha2/amd64/iso-dvd/
 
+## the commenting out the sources.list file may NOT be needed if using the first ISO on this page https://cdimage.debian.org/cdimage/bookworm_di_alpha2/amd64/iso-cd/
+It's annoying how many different options there are to download and not clear what the differences are.
+
 After installing debian 12 (bookworm) open a terminal and type:  
 
 cd /etc/apt/

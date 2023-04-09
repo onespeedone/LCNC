@@ -119,3 +119,23 @@ TARGET_HOME="/home/${SUDO_USER:-$USER}/"
 sudo -u ${SUDO_USER:-$USER} mkdir -p "${TARGET_HOME}linuxcnc/configs"
 sudo -u ${SUDO_USER:-$USER} cp -r /usr/lib/python3/dist-packages/config/probe_basic/ "${TARGET_HOME}linuxcnc/configs/"
 sudo -u ${SUDO_USER:-$USER} cp -r /usr/lib/python3/dist-packages/config/probe_basic_lathe/ "${TARGET_HOME}linuxcnc/configs/"
+
+
+******************
+old info for reference
+
+in terminal type:
+
+cd /etc/apt/
+
+then:
+
+sudo gedit sources.list
+
+comment out (#) the 2 top lines in the file
+	**************
+	TOP 2 LINES ARE THIS:
+	deb cdrom:[Debian GNU/Linux bookworm-DI-alpha2 _Bookworm_ - Official Alpha amd64 DVD Binary-1 
+	with firmware 20230218-23:57]/ bookworm main non-free-firmware
+	***************
+Save and close the file

@@ -14,11 +14,40 @@ Installing Debian 12, Linux CNC, and Probe Basic
 ## Start here ###
 Download the debian 12 iso from here
 https://cdimage.debian.org/cdimage/bookworm_di_alpha2/amd64/iso-dvd/
+Flash the iso onto USB drive and follow the steps below to load Debian 12:
 
-## the commenting out the sources.list file may NOT be needed if using the first ISO on this page https://cdimage.debian.org/cdimage/bookworm_di_alpha2/amd64/iso-cd/
-It's annoying how many different options there are to download and not clear what the differences are.
+1. Boot from USB
+2. Select 'Graphical Install'
+3. Select 'English'
+4. Select 'United States'
+5. Select 'American English'
+6. Set up your network connection
+7. Choose a single word hostname
+8. Domain can be left blank
+9. DO NOT ENTER A ROOT PASSWORD - LEAVE BLANK
+10. Enter the user's full name
+11. Enter the account username
+12. Enter the account password
+13. Enter your timezone
+14. Select 'Guided - use entire disk'
+15. Select your hard drive
+16. Select 'All files in one partition'
+17. Select 'Finish partitioning and write changes to disk'
+18. Select 'Yes'
+...wait a few minues while loading...
+19. Select 'Yes'
+20. Select 'United States'
+21. Select deb.debian.org
+22. Leave proxy blank
+...wait a few minues while loading...
+23. Select 'No'
+24. Check 'Debian desktop environment', 'Cinnamon', and 'standard system utilities'
+...wait several minues while loading...
+25. Select 'Yes'
+26. Select your hard drive
+27. Remove the USB drive and press continue to reboot
 
-After installing debian 12 (bookworm) open a terminal and type:  
+After installing debian 12 (bookworm), log in, open a terminal, and type:  
 
 cd /etc/apt/
 
@@ -32,6 +61,9 @@ comment out (#) the 2 top lines in the file
 	with firmware 20230218-23:57]/ bookworm main non-free-firmware
 	***************
 Save and close the file
+
+## NOTE: The above step to comment out the sources.list file may NOT be needed if using the first ISO on this page https://cdimage.debian.org/cdimage/bookworm_di_alpha2/amd64/iso-cd/
+It's annoying how many different options there are to download and not clear what the differences are.
 
 in your terminal type: cd ~
 

@@ -13,7 +13,7 @@ Installing Debian 12, Linux CNC, and Probe Basic
 
 ## Start here ###
 Download the debian 12 iso from here
-https://cdimage.debian.org/cdimage/bookworm_di_alpha2/amd64/iso-dvd/
+https://cdimage.debian.org/cdimage/bookworm_di_alpha2/amd64/iso-cd/
 Flash the iso onto USB drive and follow the steps below to load Debian 12:
 
 1. Boot from USB
@@ -39,7 +39,7 @@ Flash the iso onto USB drive and follow the steps below to load Debian 12:
 20. Select 'United States'
 21. Select deb.debian.org
 22. Leave proxy blank
-...wait a few minues while loading...
+...wait a few minutes while loading...
 23. Select 'No'
 24. Check 'Debian desktop environment', 'Cinnamon', and 'standard system utilities'
 ...wait several minues while loading...
@@ -47,35 +47,18 @@ Flash the iso onto USB drive and follow the steps below to load Debian 12:
 26. Select your hard drive
 27. Remove the USB drive and press continue to reboot
 
-After installing debian 12 (bookworm), log in, open a terminal, and type:  
 
-cd /etc/apt/
+After installing debian 12 (bookworm), log in, Download the 3 .deb files from the github repository to your downloads folder
 
-sudo gedit sources.list
+Open a terminal and type:
 
-comment out (#) the 2 top lines in the file
+    cd ~
 
-	**************
-	TOP 2 LINES ARE THIS:
-	deb cdrom:[Debian GNU/Linux bookworm-DI-alpha2 _Bookworm_ - Official Alpha amd64 DVD Binary-1 
-	with firmware 20230218-23:57]/ bookworm main non-free-firmware
-	***************
-Save and close the file
+Then install LinuxCNC by entering:
 
-## NOTE: The above step to comment out the sources.list file may NOT be needed if using the first ISO on this page https://cdimage.debian.org/cdimage/bookworm_di_alpha2/amd64/iso-cd/
-It's annoying how many different options there are to download and not clear what the differences are.
-
-in your terminal type: cd ~
-
-Download the 3 .deb files from the github repository to your downloads folder
-
-
-**If you have not already installed linuxcnc from apt, use the following line in main terminal:**
-
-   
     sudo apt install linuxcnc-uspace linuxcnc-uspace-dev mesaflash
 
-## Restart your computer
+## Restart your computer ##
 
 
 **Once you have installed linuxcnc, open linuxcnc and start the axis sime briefly and then you can shut it down.  this creates the folders where probe basic will copy the sim configs to.**
@@ -83,11 +66,11 @@ Download the 3 .deb files from the github repository to your downloads folder
 
 **Installing QtPyVCP and Probe Basic**
 
-**1-  Go to the downloaded files location, right click and select "Open in terminal" in that directory.**
+**1-  Go to the location of the downloaded .deb files, right click and select "Open in terminal" in that directory.**
 
 **2-  Inthe terminal enter the following command and press enter, it will require your sudo password:**
 
-    
+
     sudo apt install debhelper-compat dh-python python3-setuptools python3-yaml python3-pyqt5.qtmultimedia python3-pyqt5.qtquick qml-module-qtquick-controls libqt5multimedia5-plugins python3-dev python3-docopt python3-qtpy python3-pyudev python3-psutil python3-markupsafe python3-vtk9 python3-pyqtgraph python3-simpleeval python3-jinja2 python3-deepdiff python3-sqlalchemy qttools5-dev-tools python3-serial
 
 ** then enter:**

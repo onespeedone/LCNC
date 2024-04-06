@@ -14,6 +14,7 @@ Installing Debian 12, Linux CNC, and Probe Basic
 ## Start here ###
 Download the debian 12 iso from here
 https://cdimage.debian.org/cdimage/bookworm_di_alpha2/amd64/iso-cd/
+https://cdimage.debian.org/debian-cd/ ** main link to ISO files - select the amd64 iso-cd file **
 Flash the iso onto USB drive and follow the steps below to load Debian 12:
 
 1. Boot from USB
@@ -34,7 +35,7 @@ Flash the iso onto USB drive and follow the steps below to load Debian 12:
 16. Select 'All files in one partition'
 17. Select 'Finish partitioning and write changes to disk'
 18. Select 'Yes'
-...wait a few minues while loading...
+...wait a few minutes while loading...
 19. Select 'Yes'
 20. Select 'United States'
 21. Select deb.debian.org
@@ -42,7 +43,7 @@ Flash the iso onto USB drive and follow the steps below to load Debian 12:
 ...wait a few minutes while loading...
 23. Select 'No'
 24. Check 'Debian desktop environment', 'Cinnamon', and 'standard system utilities'
-...wait several minues while loading...
+...wait several minutes while loading...
 25. Select 'Yes'
 26. Select your hard drive
 27. Remove the USB drive and press continue to reboot
@@ -61,7 +62,7 @@ Then install LinuxCNC by entering:
 ## Restart your computer ##
 
 
-**Once you have installed linuxcnc, open linuxcnc and start the axis sime briefly and then you can shut it down.  this creates the folders where probe basic will copy the sim configs to.**
+**Once you have installed linuxcnc, open linuxcnc and start the axis sim briefly and then you can shut it down.  this creates the folders where probe basic will copy the sim configs to.**
 
 
 **Installing QtPyVCP and Probe Basic**

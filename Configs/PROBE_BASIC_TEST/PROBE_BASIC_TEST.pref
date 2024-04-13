@@ -1,0 +1,205 @@
+[DEFAULT]
+dro_digits = 4
+dro_size = 28
+abs_color = #0000FF
+rel_color = #000000
+dtg_color = #FFFF00
+homed_color = #00FF00
+unhomed_color = #FF0000
+enable_dro = False
+scale_jog_vel = 1.5
+scale_spindle_override = 1
+scale_feed_override = 1
+scale_rapid_override = 1
+spindle_bar_min = 0.0
+spindle_bar_max = 6000.0
+turtle_jog_factor = 20
+hide_turtle_jog_button = False
+unlock_code = 123
+toggle_readout = True
+spindle_start_rpm = 300.0
+blockheight = 0.0
+open_file = 
+screen1 = window
+x_pos = 40
+y_pos = 30
+width = 979
+height = 750
+use_toolmeasurement = False
+gtk_theme = Follow System Theme
+grid_size = 1.0
+view = p
+mouse_btn_mode = 4
+hide_cursor = False
+hide_tooltips = False
+system_name_tool = Tool
+system_name_g5x = G5x
+system_name_rot = Rot
+system_name_g92 = G92
+system_name_g54 = G54
+system_name_g55 = G55
+system_name_g56 = G56
+system_name_g57 = G57
+system_name_g58 = G58
+system_name_g59 = G59
+system_name_g59.1 = G59.1
+system_name_g59.2 = G59.2
+system_name_g59.3 = G59.3
+jump_to_dir = /home/jordan
+show_keyboard_on_offset = False
+show_keyboard_on_tooledit = False
+show_keyboard_on_edit = False
+show_keyboard_on_mdi = False
+x_pos_popup = 45.0
+y_pos_popup = 55
+width_popup = 250.0
+max_messages = 10
+message_font = sans 10
+use_frames = True
+reload_tool = True
+blockdel = False
+show_offsets = False
+show_dtg = False
+view_tool_path = True
+view_dimension = True
+run_from_line = no_run
+unlock_way = use
+show_preview_on_offset = False
+use_keyboard_shortcuts = False
+tool_in_spindle = 0
+
+[DIALOG_OPTIONS]
+entrydialog_play_sound = True
+entrydialog_sound_type = READY
+tooldialog_play_sound = True
+tooldialog_speak = True
+tooldialog_sound_type = READY
+calculatordialog_play_sound = True
+calculatordialog_sound_type = READY
+machinelogdialog_play_sound = True
+machinelogdialog_sound_type = READY
+runfromlinedialog_play_sound = True
+runfromlinedialog_sound_type = READY
+EntryDialog_play_sound = True
+EntryDialog_sound_type = READY
+toolDialog_play_sound = True
+toolDialog_speak = True
+toolDialog_sound_type = READY
+CalculatorDialog_play_sound = True
+CalculatorDialog_sound_type = READY
+MachineLogDialog_play_sound = True
+MachineLogDialog_sound_type = READY
+RunFromLineDialog_play_sound = True
+RunFromLineDialog_sound_type = READY
+
+[DIALOG_GEOMETRY]
+toolchangedialog-geometry = 0 0 100 30
+lncmessage-geometry = 0 0 100 30
+axistoolbuttondialog_calculator = 3 60 438 387
+ToolChangeDialog-geometry = 0 0 100 30
+
+[SCREEN_OPTIONS]
+catch_errors = True
+desktop_notify = True
+shutdown_check = True
+sound_player_on = False
+mainwindow_geometry = 122 101 1440 860
+
+[MCH_MSG_OPTIONS]
+mchnmsg_play_sound = True
+mchnmsg_speak_errors = True
+mchnmsg_sound_type = RING
+mchnMsg_play_sound = True
+mchnMsg_speak_errors = True
+mchnMsg_sound_type = RING
+
+[USR_MSG_OPTIONS]
+usermsg_play_sound = True
+usermsg_sound_type = RING
+usermsg_use_focusoverlay = True
+userMsg_sound_type = RING
+userMsg_use_focusOverlay = True
+
+[SHUTDOWN_OPTIONS]
+shutdown_play_sound = True
+shutdown_alert_sound_type = READY
+shutdown_exit_sound_type = LOGOUT
+shutdown_msg_title = Do you want to Shutdown now?
+shutdown_msg_detail = 
+
+[NOTIFY_OPTIONS]
+notify_start_greeting = True
+notify_start_title = Welcome
+notify_start_detail = This option can be changed in the preference file
+notify_start_timeout = 5
+
+[BOOK_KEEPING]
+last_loaded_directory = /home/jordan/linuxcnc
+last_loaded_file = /home/jordan/linuxcnc/JORDANtEST.ngc
+style_qss_path = /usr/share/qtvcp/screens/qtdragon/qtdragon_dark_grey.qss
+style_QSS_Path = /usr/share/qtvcp/screens/qtdragon/qtdragon_dark_grey.qss
+
+[PROBE OPTIONS]
+probe tool = 0
+probe rapid = 10.0
+probe max xy = 10.0
+probe max z = 2.0
+probe extra depth = 0.0
+probe step off = 10.0
+probe feed = 10.0
+probe xy clearance = 10.0
+probe z clearance = 10.0
+probe edge width = 10.0
+Probe tool = 0
+Probe rapid = 10.0
+Probe max xy = 10.0
+Probe max z = 2.0
+Probe extra depth = 0.0
+Probe step off = 10.0
+Probe feed = 10.0
+Probe xy clearance = 10.0
+Probe z clearance = 10.0
+Probe edge width = 10.0
+
+[CUSTOM_FORM_ENTRIES]
+tool to load = 0
+laser x = 100.0
+laser y = -20.0
+sensor x = 10.0
+sensor y = 10.0
+work height = 20.0
+touch height = 40.0
+sensor height = 40.0
+search velocity = 40.0
+probe velocity = 10.0
+max probe = 10.0
+eoffset count = 0
+external offsets = False
+reload program = False
+reload tool = False
+use keyboard = False
+run from line = False
+use virtual keyboard = False
+use alpha display mode = False
+inhibit display mouse selection = True
+Tool to load = 0
+Laser X = 100.0
+Laser Y = -20.0
+Sensor X = 10.0
+Sensor Y = 10.0
+Work Height = 20.0
+Touch Height = 40.0
+Sensor Height = 40.0
+Search Velocity = 40.0
+Probe Velocity = 10.0
+Max Probe = 10.0
+Eoffset count = 0
+External offsets = False
+Reload program = False
+Reload tool = False
+Use keyboard = False
+Run from line = False
+Use virtual keyboard = False
+Use alpha display mode = False
+Inhibit display mouse selection = True
+

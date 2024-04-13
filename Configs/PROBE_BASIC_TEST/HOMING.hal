@@ -1,0 +1,10 @@
+# external input signals
+
+# --- HOME-X ---
+net x-home-sw     <=  hm2_7i76e.0.7i76.0.0.input-20
+
+# --- HOME-Y ---
+net y-home-sw     <=  hm2_7i76e.0.7i76.0.0.input-21
+
+# --- HOME-Z ---
+net z-home-sw     <=  hm2_7i76e.0.7i76.0.0.input-22

@@ -1,0 +1,10 @@
+# Include your custom_postgui HAL commands here
+# This file will not be overwritten when you run PNCconf again
+
+# include time.hal here
+source time.hal
+
+# this sets the feed override back to 100% when clicking encoder button - has to be in post gui or it doesn't work since
+# feed-override.reset is a qtpybvp signal
+net feed-full       <=  hm2_7i76e.0.7i76.0.0.input-08
+net feed-full       =>  qtpyvcp.feed-override.reset

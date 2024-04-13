@@ -1,0 +1,33 @@
+# --- Feed Override ---
+
+#loadrt encoder    num_chan=4
+
+#net feed-encoder        <=  hm2_7i76e.0.7i76.0.0.enc1.count 
+#net feed-encoder        =>  halui.feed-override.counts
+
+#setp halui.feed-override.count-enable 1
+#setp halui.feed-override.scale .1
+
+#addf encoder.update-counters    servo-thread
+#addf encoder.capture-position    servo-thread
+
+#setp encoder.0.x4-mode 1
+#setp halui.feed-override.value 1
+
+
+
+#net feed-full       <=  hm2_7i76e.0.7i76.0.0.input-08
+#net cfeed-full       =>  qtpyvcp.feed-override.reset
+
+#setp halui.feed-override.direct-value 1
+
+# net feed-chB        <=  hm2_7i76e.0.7i76.0.0.enc1.count
+# net feed-chB        =>  encoder.1.phase-B
+
+# net feed-output        <=  encoder.0.counts
+# net feed-output        =>  halui.feed-override.counts
+
+#setp halui.feed-override.count-enable 1
+#setp halui.feed-override.scale .1
+
+

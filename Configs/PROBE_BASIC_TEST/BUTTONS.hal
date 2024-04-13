@@ -1,0 +1,69 @@
+# ******************************
+# --- Program Control ---
+# ******************************
+# --- Cycle start and resume ---
+#
+loadrt and2 count=2
+loadrt or2 count=2
+
+addf and2.0 servo-thread
+addf and2.1 servo-thread
+
+addf or2.0 servo-thread
+addf or2.1 servo-thread
+
+# --- ESTOP-EXT ---
+net estop-ext     <=  hm2_7i76e.0.7i76.0.0.input-04
+# --- CYCLE-START ---
+net remrun hm2_7i76e.0.7i76.0.0.input-05
+net remrun and2.1.in0 and2.0.in1
+
+net remidle halui.program.is-idle and2.0.in0
+
+net remgo and2.0.out halui.mode.auto halui.program.run
+
+net remstop halui.program.is-paused and2.1.in1
+
+net remresume and2.1.out halui.program.resume
+# --- FEED-HOLD ---
+net remstart halui.program.pause <= hm2_7i76e.0.7i76.0.0.input-06-not halui.program.pause
+
+
+# Stop Section
+# This is your Stop input
+# The contact is NO - Normally Open, the button is connected between Field Power and the input
+#net stop-btn <= hm2_7i76e.0.7i76.0.0.input-02-not
+# --- STOP/RESET ---
+net stop-btn <= hm2_7i76e.0.7i76.0.0.input-07
+net stop-btn => halui.program.stop
+#net stop-btn => or2.1.in1
+# I had to pause before stop, to avoid this error:
+# can't do that (EMC_TRAJ_SET_TELEOP_ENABLE) in auto mode with interpreter idle'
+# So I used an OR because halui.program.pause is activated from two places now, here and in rthe previous section
+#net program-pause or2.1.out => halui.program.pause
+
+net mode-btn-manual <= hm2_7i76e.0.7i76.0.0.input-15
+net mode-btn-manual => halui.mode.manual
+
+net mode-btn-mdi <= hm2_7i76e.0.7i76.0.0.input-26
+net mode-btn-mdi => halui.mode.mdi
+
+# --- Feed Override ---
+
+loadrt encoder    num_chan=4
+
+net feed-encoder        <=  hm2_7i76e.0.7i76.0.0.enc1.count 
+net feed-encoder        =>  halui.feed-override.counts
+
+setp halui.feed-override.count-enable 1
+setp halui.feed-override.scale .05
+
+# --- Drive Fault ---
+net x-drive-fault <= hm2_7i76e.0.7i76.0.0.input-27
+net x-drive-fault => joint.0.amp-fault-in
+
+net y-drive-fault <= hm2_7i76e.0.7i76.0.0.input-28
+net y-drive-fault => joint.1.amp-fault-in
+
+net z-drive-fault <= hm2_7i76e.0.7i76.0.0.input-29
+net z-drive-fault => joint.2.amp-fault-in

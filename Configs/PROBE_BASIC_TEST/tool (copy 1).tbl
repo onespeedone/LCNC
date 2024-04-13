@@ -1,0 +1,8 @@
+;Tool  Pocket Z Offset     Diameter     Remark
+T1     P1     Z-1.000000   D+0.125000   ; Center Drill
+T3     P3     Z+1.000000   D+0.250000   ; End mill
+T4     P4     Z-10.884400  D+0.250000   ; 1/4 Carbide Sq
+T5     P5     Z+0.000000   D+0.125000   ; Test Offset
+T6     P6     Z+0.000000   D+0.000000   ; New Tool
+T100   P2     Z-3.870700   D+0.250000   ; Master Tool
+T18    P18    Z+3.000000   D+0.000000   ; 1/4 em 3flt sq

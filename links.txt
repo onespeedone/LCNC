@@ -1,0 +1,5 @@
+https://forum.linuxcnc.org/qtvcp/50477-qtdragon-hd-with-mdi-issue
+
+https://www.forum.linuxcnc.org/qtvcp/47962-keyboard-jogging-in-qtdragon
+
+https://forum.linuxcnc.org/qtvcp/41877-qtdragon-hd-looses-keyboard-shortcuts

@@ -1,0 +1,7 @@
+# Include your custom HAL commands here
+# This file will not be overwritten when you run PNCconf again
+# --- Vacuum relay output ---
+#net coolant-flood  =>     hm2_7i96s.0.ssr.00.out-01
+
+#--- spindle display speed ----
+#net spindle-speed-feedback spindle.0.speed-out-rps => spindle.0.speed-in

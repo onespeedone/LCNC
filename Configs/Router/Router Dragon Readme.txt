@@ -1,4 +1,8 @@
 Readme
 
-This version of PNCONF does not use the same home positions for both dies of the gantry.
+This version of PNCONF does not use the same home offset positions for both sides of the gantry.
 This needs to be manually added to the INI file so the gantry squares after homing
+
+###########
+HOME_OFFSET = 0.250000
+###########

@@ -1,0 +1,199 @@
+# Include your custom HAL commands here
+# This file will not be overwritten when you run PNCconf again
+
+# Include your custom HAL commands here
+# This file will not be overwritten when you run PNCconf again
+
+loadrt and2 count=2
+loadrt  mux16  names=jogincr
+
+addf and2.0 servo-thread
+addf and2.1 servo-thread
+
+
+addf  jogincr          servo-thread
+
+#             --- JOG INCREMENTS---
+
+# section 1
+# --- JOG-INCR-A ---
+net jog-incr-a     <=  [HMOT](CARD0).7i76.0.0.input-09
+
+# --- JOG-INCR-B ---
+net jog-incr-b     <=  [HMOT](CARD0).7i76.0.0.input-10
+
+# --- JOG-INCR-C ---
+net jog-incr-c     <=  [HMOT](CARD0).7i76.0.0.input-11
+
+
+
+#            --- JOINT SELECTIONS---
+
+# section 2
+# --- JOINT-SELECT-X ---
+net axis-select-x      <=  [HMOT](CARD0).7i76.0.0.input-12
+
+# --- JOINT-SELECT-Y --- 
+net axis-select-y     <=  [HMOT](CARD0).7i76.0.0.input-13
+
+# --- JOINT-SELECT-Z --- 
+net axis-select-z      <=  [HMOT](CARD0).7i76.0.0.input-14
+
+# section 3 not used
+
+
+# ---jogwheel signals to mesa encoder - shared MPG---
+
+# section 4
+net axis-selected-count     <=  [HMOT](CARD0).7i76.0.0.enc0.count
+
+
+#  ---mpg signals---
+
+# section 5
+#       for axis x MPG
+# uncomment the jog-vel-mode you want to use
+# comment out the one you dont
+# mode 1 is typically used
+#setp    axis.x.jog-vel-mode 0
+setp    axis.x.jog-vel-mode 1
+#
+net selected-jog-incr    =>  axis.x.jog-scale
+net axis-select-x       =>  axis.x.jog-enable
+net axis-selected-count =>  axis.x.jog-counts
+
+# section 6
+#       for axis y MPG
+# uncomment the jog-vel-mode you want to use
+# comment out the one you dont
+# mode 1 is typically used
+#setp    axis.y.jog-vel-mode 0
+setp    axis.y.jog-vel-mode 1
+#
+net selected-jog-incr    =>  axis.y.jog-scale
+net axis-select-y       =>  axis.y.jog-enable
+net axis-selected-count =>  axis.y.jog-counts
+
+# section 7
+#       for axis z MPG
+# uncomment the jog-vel-mode you want to use
+# comment out the one you dont
+# mode 1 is typically used
+#setp    axis.z.jog-vel-mode 0
+setp    axis.z.jog-vel-mode 1
+#
+net selected-jog-incr    =>  axis.z.jog-scale
+net axis-select-z       =>  axis.z.jog-enable
+net axis-selected-count =>  axis.z.jog-counts
+
+# sections 8, 9, and 10 are not used
+
+
+# jog increment
+
+# section 11
+# note jog increments are in 0.0000 or standard measurements
+
+net jog-incr-a          =>  jogincr.sel0
+net jog-incr-b          =>  jogincr.sel1
+net jog-incr-c          =>  jogincr.sel2
+net jog-incr-d          =>  jogincr.sel3
+net selected-jog-incr   <=  jogincr.out-f
+    setp jogincr.debounce-time      0.200000
+    setp jogincr.use-graycode       false
+    setp jogincr.suppress-no-input  false
+    setp jogincr.in00         0.0000
+    setp jogincr.in01         0.0001
+    setp jogincr.in02         0.0010
+    setp jogincr.in03         0.0000
+    setp jogincr.in04         0.0100
+    # setp jogincr.in05         1.0000
+    # setp jogincr.in06         0.1000
+    # setp jogincr.in07         0.0000
+    # setp jogincr.in08         0.0000
+    # setp jogincr.in09         0.0000
+    # setp jogincr.in10         0.0000
+    # setp jogincr.in11         0.0000
+    # setp jogincr.in12         0.0000
+    # setp jogincr.in13         0.0000
+    # setp jogincr.in14         0.0000
+    # setp jogincr.in15         0.0000
+
+
+############ FEED OVERRIDE #################
+
+# --- Feed Override ---
+
+loadrt encoder    num_chan=4
+
+net feed-encoder        <=  [HMOT](CARD0).7i76.0.0.enc1.count
+net feed-encoder        =>  halui.feed-override.counts
+
+setp halui.feed-override.count-enable TRUE
+setp halui.feed-override.scale .05
+
+addf encoder.update-counters    servo-thread
+addf encoder.capture-position    servo-thread
+
+net feed-full       <=  hm2_7i76e.0.7i76.0.0.input-08
+net feed-full       =>  halui.feed-override.reset
+
+setp halui.feed-override.direct-value FALSE
+
+################# DRIVE ERRORS ##############
+
+
+# --- Drive Fault ---
+net x-drive-fault <= hm2_7i76e.0.7i76.0.0.input-27
+net x-drive-fault => joint.0.amp-fault-in
+
+net y-drive-fault <= hm2_7i76e.0.7i76.0.0.input-28
+net y-drive-fault => joint.1.amp-fault-in
+
+net z-drive-fault <= hm2_7i76e.0.7i76.0.0.input-29
+net z-drive-fault => joint.2.amp-fault-in
+
+################## MODE BUTTONS #############
+
+net mode-btn-manual <= hm2_7i76e.0.7i76.0.0.input-23
+net mode-btn-manual => halui.mode.manual
+
+net mode-btn-mdi <= hm2_7i76e.0.7i76.0.0.input-24
+net mode-btn-mdi => halui.mode.mdi
+
+#net mode-btn-auto <= hm2_7i76e.0.7i76.0.0.input-25
+#net mode-btn-auto => halui.mode.auto
+
+########### OTHER BUTTONS ############
+
+# --- CYCLE-START ---
+net remrun hm2_7i76e.0.7i76.0.0.input-05
+net remrun and2.1.in0 and2.0.in1
+
+net remidle halui.program.is-idle and2.0.in0
+
+net remgo and2.0.out halui.mode.auto halui.program.run
+
+
+net remstop halui.program.is-paused and2.1.in1
+
+net remresume and2.1.out halui.program.resume
+
+# --- FEED-HOLD ---
+net remstart halui.program.pause <= hm2_7i76e.0.7i76.0.0.input-06-not halui.program.pause
+
+# --- STOP/RESET ---
+net stop-btn <= hm2_7i76e.0.7i76.0.0.input-07
+net stop-btn => halui.program.stop
+
+
+###########
+# --- HOME-X ---
+net home-x     <=  hm2_7i76e.0.7i76.0.0.input-20
+
+# --- HOME-Y ---
+net home-y     <=  hm2_7i76e.0.7i76.0.0.input-21
+
+# --- HOME-Z ---
+net home-z     <=  hm2_7i76e.0.7i76.0.0.input-22
+

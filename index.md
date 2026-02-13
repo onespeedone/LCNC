@@ -13,11 +13,7 @@ Linux CNC stuff. Mostly for my own memory
   <tbody>
     <tr>
       <td><a href="/Meshtastic-Experiments/Battery-Runtime-Tests">Battery Runtime Tests</a></td>
-      <td>I conducted various tests with different devices and batteries to determine the actual runtime. This helps in better planning how long a node will remain powered on when using a battery.</td>
-    </tr>
-    <tr>
-      <td><a href="/Meshtastic-Experiments/LoRa-Boards-Power-Measurements">LoRa Boards Power Measurements</a></td>
-      <td>I personally tested and measured the power consumption of each node I own to provide real values based on the tested firmware.</td>
+      <td>Random Linux text.</td>
     </tr>
     <tr>
       <td><a href="/Meshtastic-Experiments/Antennas-Tested">Antennas Tested</a></td>

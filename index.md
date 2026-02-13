@@ -16,7 +16,7 @@ Linux CNC stuff. Mostly for my own memory
       <td>Random Linux text.</td>
     </tr>
     <tr>
-      <td><a href="/Meshtastic-Experiments/Compatible-Peripherals">Compatible Peripherals</a></td>
+      <td><a href="/Meshtastic-Experiments/Compatible-Peripherals">CNC is better</a></td>
       <td>More Junk.</td>
     </tr>  
   </tbody>

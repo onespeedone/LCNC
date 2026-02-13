@@ -16,24 +16,8 @@ Linux CNC stuff. Mostly for my own memory
       <td>Random Linux text.</td>
     </tr>
     <tr>
-      <td><a href="/Meshtastic-Experiments/Antennas-Tested">Antennas Tested</a></td>
-      <td>This is a list of all antennas tested and recommended</td>
-    </tr>    
-    <tr>
-      <td><a href="/Meshtastic-Experiments/ADC-Calculator">ADC Calculator</a></td>
-      <td>The ADC Calculator on the Meshtastic website is often inaccurate as it calculates based on percentage. This calculator, however, uses the voltage measured by the node for more precise results.</td>
-    </tr>
-    <tr>
-      <td><a href="/Meshtastic-Experiments/LoRa-Boards-Comparison-Table">LoRa Boards Comparison Table</a></td>
-      <td>This extensive table compares all development boards with built-in LoRa, allowing you to see and plan out the features available for better planning.</td>
-    </tr>
-    <tr>
-      <td><a href="/Meshtastic-Experiments/Complete-nodes-List">Recomended Etsy/Tindie Nodes</a></td>
-      <td>This is a list of all nodes I could find on both marketplaces that meat a decent runtime, quality and functionality standard to best enjoy Meshtastic</td>
-    </tr>
-    <tr>
       <td><a href="/Meshtastic-Experiments/Compatible-Peripherals">Compatible Peripherals</a></td>
-      <td>This is a list of all additional hardware currently supported by Meshtastic.</td>
+      <td>More Junk.</td>
     </tr>  
   </tbody>
 </table>

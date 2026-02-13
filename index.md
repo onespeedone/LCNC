@@ -12,7 +12,7 @@ Linux CNC stuff. Mostly for my own memory
 <table>
   <tbody>
     <tr>
-      <td><a href="/Meshtastic-Experiments/Battery-Runtime-Tests">Battery Runtime Tests</a></td>
+      <td><a href="/Meshtastic-Experiments/Battery-Runtime-Tests">Linux is the best</a></td>
       <td>Random Linux text.</td>
     </tr>
     <tr>

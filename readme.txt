@@ -1,4 +1,5 @@
-JJM 04/06/2024
+JJM 2/17/2026
+** JJM 04/06/2024 Previous edit date **
 **JJM 04/07/2023 LAST EDIT NEARLY ONE YEAR TO THE DAY!!!**
 Linuxcnc Stuff
 
@@ -17,6 +18,8 @@ Download the debian 12 iso from here
 https://cdimage.debian.org/cdimage/bookworm_di_alpha2/amd64/iso-cd/
 https://cdimage.debian.org/debian-cd/ ** main link to ISO files - select the amd64 iso-cd file **
 Flash the iso onto USB drive and follow the steps below to load Debian 12:
+Debian 13 link https://cdimage.debian.org/debian-cd/13.3.0/amd64/iso-cd/
+Use the CD image. During installation you can select the GUI (cinnamon is my choice)
 
 1. Boot from USB
 2. Select 'Graphical Install'

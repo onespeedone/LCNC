@@ -2,9 +2,6 @@ JJM 2/17/2026
 
 Linuxcnc Stuff
 
-Thank you to the LinuxCNC forum user Lcvette on his post at https://forum.linuxcnc.org/qtpyvcp/48373-qtpyvcp-and-probe-basic-deb-installation-files-inside
-and his google drive link https://drive.google.com/drive/folders/14tM4MHqLw26ebGVavKvTBb3ptx_IIcj5
-
 Installing Debian 13 and Linux CNC,
 **Requirements:**
 
@@ -66,7 +63,7 @@ Realtime Kernel
 
 As of 2/17/2026 the default kernel is a realtime kernel (preempt) when using the amd64 cd iso
 
-To check what kernal is running open a terminal and type:
+To check what kernel is running open a terminal and type:
 
     uname -a
 

@@ -65,7 +65,7 @@ As of 2/17/2026 the default kernel is a realtime kernel (preempt) when using the
 
 To check what kernel is running open a terminal and type:
 
-    uname -a
+    uname -v
 
 If you need to add a realtime kernal, open synaptics package manager and search for preempt and check the box to install the latest version. 
 Restart linux and at the grub screen select advanced options and slect the realtime kernel that was just installed.
@@ -80,3 +80,36 @@ to run it type:
 
 Change the default kernel to the preempt RT kernel
 
+From https://linuxcnc.org/docs/html/getting-started/getting-linuxcnc.html
+
+Run the following in a terminal to bring the machine up to date with the latest packages.
+
+    sudo apt-get update
+    sudo apt-get dist-upgrade
+
+Install the Preempt-RT kernel and modules
+
+    sudo apt-get install linux-image-rt-amd64
+
+Re-boot, and select the Linux 6.1.0-10-rt-amd64 kernel. The exact kernel version might be different, look for the "-rt" suffix. This might be hidden in the "Advanced options for Debian Bookworm" sub-menu in Grub. When you log in, verify that `PREEMPT RT`is reported by the following command.
+
+    uname -v
+
+Open Applications Menu > System > Synaptic Package Manager search for linux-image and right click on the original non-rt and select Mark for Complete Removal. Reboot. This is to force the system to boot from the RT kernel. If you prefer to retain both kernels then the other kernels need not be deleted, but grub boot configuration changes will be needed beyond the scope of this document.
+
+Add the LinuxCNC Archive Signing Key to your apt keyring by downloading [the LinuxCNC installer script](https://www.linuxcnc.org/linuxcnc-install.sh) You will need to make the script executable to run it:
+
+    chmod +x linuxcnc-install.sh
+
+Then you can run the installer:
+
+    sudo ./linuxcnc-install.sh
+
+*********************** ETHERCAT INFO ******************************
+
+https://github.com/LukasOtis/LinuxCNCEthercat
+
+Supported devices:
+https://github.com/linuxcnc-ethercat/linuxcnc-ethercat/blob/master/documentation/DEVICES.md
+
+https://github.com/szolkaa/Automatic-linuxcnc-config-generators-for-ethercat
